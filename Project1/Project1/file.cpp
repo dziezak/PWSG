@@ -1,17 +1,18 @@
-#include <windows.h>
+Ôªø#include <windows.h>
 
 LPCWSTR NazwaKlasy = L"Klasa Okienka";
 MSG Komunikat;
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+//to terminate: taskkill /IM Project1.exe /F
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-    // WYPE£NIANIE STRUKTURY
+    // WYPE≈ÅNIANIE STRUKTURY
     WNDCLASSEX wc;
 
     wc.cbSize = sizeof(WNDCLASSEX);
-    wc.style = 0;
+    wc.style = CS_HREDRAW | CS_VREDRAW | CS_NOCLOSE; // Dodaj CS_NOCLOSE
     wc.lpfnWndProc = WndProc;
     wc.cbClsExtra = 0;
     wc.cbWndExtra = 0;
@@ -32,19 +33,26 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     }
 
     // TWORZENIE OKNA
-    HWND hwnd = CreateWindowEx(WS_EX_CLIENTEDGE, NazwaKlasy, L"Oto okienko", WS_OVERLAPPEDWINDOW,
-        CW_USEDEFAULT, CW_USEDEFAULT, 240, 120, NULL, NULL, hInstance, NULL);
+    HWND hwnd = CreateWindowEx(
+        WS_EX_OVERLAPPEDWINDOW,  // Rozszerzony styl okna
+        NazwaKlasy,              // Nazwa klasy okna
+        L"Oto okienko",          // Tytu≈Ç okna
+        WS_OVERLAPPEDWINDOW,     // Styl okna
+        CW_USEDEFAULT, CW_USEDEFAULT,  // Pozycja okna
+        1200, 600,               // Rozmiar okna
+        NULL, NULL, hInstance, NULL    // Parametry dodatkowe
+    );
 
     if (hwnd == NULL)
     {
-        MessageBoxA(NULL, "Okno odmÛwi≥o przyjúcia na úwiat!", "Ale kicha...", MB_ICONEXCLAMATION);
+        MessageBoxA(NULL, "Okno odm√≥wi≈Ço przyj≈õcia na ≈õwiat!", "Ale kicha...", MB_ICONEXCLAMATION);
         return 1;
     }
 
     ShowWindow(hwnd, nCmdShow);
     UpdateWindow(hwnd);
 
-    // PÍtla komunikatÛw
+    // Pƒôtla komunikat√≥w
     while (GetMessage(&Komunikat, NULL, 0, 0) > 0)
     {
         TranslateMessage(&Komunikat);
@@ -54,7 +62,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     return (int)Komunikat.wParam;
 }
 
-// OBS£UGA ZDARZE—
+// OBS≈ÅUGA ZDARZE≈É
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     switch (msg)
