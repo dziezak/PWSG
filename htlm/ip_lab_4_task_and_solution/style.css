@@ -1,0 +1,80 @@
+﻿        p {
+            text-align: justify;
+            margin-top: 0px;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        div {
+            width: 30%;
+            position: absolute;
+        }
+
+            div:nth-of-type(2) {
+                left: 0%;
+            }
+
+
+            div:nth-of-type(1) {
+                left: 35%;
+            }
+
+            div:nth-of-type(3) {
+                left: 70%;
+            }
+
+        @media (max-width: 1080px) {
+            div {
+                width: 100%;
+                position: relative;
+                min-width: 22em;
+            }
+
+
+                div:nth-of-type(n) {
+                    left: 0%;
+                }
+
+            fieldset {
+                width: 20em;
+                position: relative;
+                margin: 0 auto;
+            }
+        }
+
+
+        label {
+            float: left;
+            display: block;
+            width: 100%;
+            padding-bottom: 0.25em;
+            padding-top: 0.25em;
+            text-align: right;
+        }
+
+            label:nth-child(2n+1) {
+                background: #cbdbff;
+            }
+
+        input {
+            margin-left: 1em;
+            width: 50%;
+            float: right;
+        }
+
+            input:valid {
+                background-color: #a2d598;
+            }
+
+            input:invalid {
+                background-color: #ffe0a9;
+            }
+
+            input:required {
+                border-color: red;
+            }
+
+        fieldset {
+            text-align: center;
+            border-radius: 2em;
+        }

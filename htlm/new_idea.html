@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pure HTML Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 48%;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input:invalid {
+            border: 2px solid red;
+        }
+
+        input:valid {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <h2>Register</h2>
+
+        <label>
+            Username:
+            <input type="text" name="username" pattern="[A-Za-z0-9]+" required 
+                   title="Only letters and digits" placeholder="Letters and numbers only">
+        </label>
+
+        <label>
+            Email:
+            <input type="email" name="email" required placeholder="example@email.com">
+        </label>
+
+        <label>
+            Password:
+            <input type="password" name="password" minlength="8" required 
+                   placeholder="Minimum 8 characters">
+        </label>
+
+        <label>
+            Confirm Password:
+            <input type="password" name="confirm" minlength="8" required 
+                   placeholder="Repeat password">
+        </label>
+
+        <div class="btn-group">
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+        </div>
+    </form>
+
+</body>
+</html>

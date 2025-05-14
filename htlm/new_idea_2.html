@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wizytówka użytkownika</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 30px;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #1976d2;
+        }
+
+        h2 {
+            margin: 10px 0 5px;
+        }
+
+        p {
+            margin: 0;
+            color: #666;
+        }
+
+        .socials {
+            margin-top: 20px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            margin: 0 8px;
+            color: #1976d2;
+            font-size: 1.4em;
+        }
+
+        .socials a:hover {
+            color: #0f4ea0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img class="avatar" src="https://via.placeholder.com/120" alt="Profilowe">
+        <h2>Kornel Dzieza</h2>
+        <p>First day as a frontend developer</p>
+        <div class="socials">
+            <a href="#">🌐</a>
+            <a href="#">💼</a>
+            <a href="#">✉️</a>
+        </div>
+    </div>
+
+</body>
+</html>

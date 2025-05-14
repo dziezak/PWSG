@@ -1,0 +1,33 @@
+General:
+3p. For an (almost) complete solution valid with (X)HTML5 and CSS 3 standards
+
+General layout:
+1p. Create a three column display with each of the columns taking 30% of the width
+1p. Paragraphs start at the same level as the caption of the form
+1p. Paragraphs have a 1em sized side margins
+1p. Title bar displays a provided icon and "Thursday 10:15 a.m." text
+
+General layout for browser width less than or equal 1080px:
+2p. The display switches to single column, with the form coming first
+1p. The form is centred and has a 20em width
+
+Text content:
+1p. Justify the text in all the columns.
+1p. The right and left columns present 5 paragraphs of text (e.g. from lipsum.com).
+
+Registration form features:
+1p. Only alphanumeric characters allowed in login
+1p. Passwords at least 8 signs long
+1p. All fields are set with an initial text: "Only alphanumeric characters", "Please enter e-mail", "At least 8 characters"
+1p. Login and passwords are required fields
+
+Registration form display:
+1p. Registration form with proper types of input fields and usage of labels
+1p. Form has a rounded border
+1p. Fields are separated by a 0.5em distance
+1p. Pink background of an invalid input and green background of a valid input
+1p. Required field has a red border
+1p. Input takes 50% of the width of the form
+1p. Labels are aligned to the right with 1em distance between them and the inputs
+1p. Buttons are centred
+1p. Every second input entry has a blue background

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zakładki CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6f9;
+            padding: 40px;
+        }
+
+        .tabs {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Ukrycie checkboxów */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Styl nagłówków zakładek */
+        .tab-labels {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .tab-labels label {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .tab-labels label:hover {
+            background-color: #d0d0d0;
+        }
+
+        /* Styl aktywnej zakładki */
+        input#tab1:checked ~ .tab-labels label[for="tab1"],
+        input#tab2:checked ~ .tab-labels label[for="tab2"],
+        input#tab3:checked ~ .tab-labels label[for="tab3"] {
+            background-color: #ffffff;
+            border-bottom: 3px solid #1976d2;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        #tab1:checked ~ .tab-content-container #content1,
+        #tab2:checked ~ .tab-content-container #content2,
+        #tab3:checked ~ .tab-content-container #content3 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tabs">
+        <!-- Ukryte przyciski radio -->
+        <input type="radio" name="tabs" id="tab1" checked>
+        <input type="radio" name="tabs" id="tab2">
+        <input type="radio" name="tabs" id="tab3">
+
+        <!-- Etykiety jako nagłówki -->
+        <div class="tab-labels">
+            <label for="tab1">Profil</label>
+            <label for="tab2">Projekty</label>
+            <label for="tab3">Kontakt</label>
+        </div>
+
+        <!-- Treści zakładek -->
+        <div class="tab-content-container">
+            <div id="content1" class="tab-content">
+                <h3>Profil</h3>
+                <p>Cześć! Nazywam się Anna i jestem frontend developerem z 5-letnim doświadczeniem.</p>
+            </div>
+            <div id="content2" class="tab-content">
+                <h3>Projekty</h3>
+                <ul>
+                    <li>Portfolio w React</li>
+                    <li>Landing page dla startupu</li>
+                    <li>Blog techniczny</li>
+                </ul>
+            </div>
+            <div id="content3" class="tab-content">
+                <h3>Kontakt</h3>
+                <p>Możesz skontaktować się ze mną przez e-mail: anna@example.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

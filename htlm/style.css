@@ -1,0 +1,137 @@
+body {
+    background-color: #050826; /* ciemny granat */
+    color: #fff14d;            /* jaśniejszy żółty */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  h1, h2, h3 {
+    color: #fff14d;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #0a0f3c;
+    color: #fff14d;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #fff14d;
+  }
+  
+  th {
+    background-color: #12163a;
+    color: #fff;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0a0f3c;
+    padding: 10px;
+  }
+  
+  .navbar button {
+    background-color: transparent;
+    color: #fff14d;
+    border: 2px solid #fff14d;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar button:hover {
+    background-color: #fff14d;
+    color: #0a0f3c;
+  }
+  
+  form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #0a0f3c;
+    border-radius: 8px;
+    max-width: 600px;
+    color: #fff14d;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea,
+  form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    background-color: #050826;
+    color: #fff14d;
+    border: 1px solid #fff14d;
+    border-radius: 4px;
+  }
+  
+  form button {
+    margin-top: 15px;
+    background-color: transparent;
+    border: 2px solid #fff14d;
+    color: #fff14d;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #fff14d;
+    color: #0a0f3c;
+  }
+  
+  a {
+    color: #fff14d;
+    text-decoration: underline;
+  }
+  
+  a:hover {
+    color: #ffff66;
+  }
+  
+  img {
+    max-width: 300px;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar button {
+      width: 90%;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  }
+ 

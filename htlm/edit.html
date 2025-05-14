@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zmień odcinek</title>
+  <style>
+    /* Tło strony */
+    body {
+      background-color: #001f3f; /* ciemny granat */
+      color: #ffeb3b; /* jasny żółty */
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffeb3b;
+    }
+
+    /* Nawigacja */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background-color: #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .navbar button {
+      color: white;
+      background-color: #555;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar button:hover {
+      background-color: #777;
+    }
+
+    /* Formularz */
+    form {
+      background-color: #003366;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+
+    form input, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+
+    form input {
+      background-color: #1b1f5c;
+      color: #feda4a;
+    }
+
+    form button {
+      background-color: #ffeb3b;
+      color: #001f3f;
+      font-weight: bold;
+    }
+
+    form button:hover {
+      background-color: #fff176;
+    }
+
+    /* Responsywność */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      form {
+        padding: 15px;
+      }
+
+      .navbar button {
+        width: 100%;
+        font-size: 14px;
+      }
+
+      form input, form button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nawigacja -->
+  <nav class="navbar">
+    <button onclick="location.href='index.html'">Strona główna</button>
+    <button onclick="location.href='edit.html'">Zmień odcinek</button>
+  </nav>
+
+  <h1>Zmień aktualny odcinek</h1>
+
+  <!-- Formularz -->
+  <form id="updateForm">
+    <label for="newName">Nazwa odcinka:</label>
+    <input type="text" id="newName" required placeholder="Podaj nazwę odcinka">
+
+    <label for="newLink">Link do odcinka:</label>
+    <input type="url" id="newLink" required placeholder="https://...">
+
+    <button type="submit">Zapisz i wróć</button>
+  </form>
+
+  <script>
+    // Zapisz dane do localStorage
+    document.getElementById("updateForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("newName").value;
+      const link = document.getElementById("newLink").value;
+
+      localStorage.setItem("episodeName", name);
+      localStorage.setItem("episodeLink", link);
+
+      window.location.href = "index.html"; // wróć na stronę główną
+    });
+  </script>
+
+</body>
+</html>
+

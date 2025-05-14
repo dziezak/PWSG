@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    <title>Odcinki HIMYM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <button onclick="location.href='index.html'">Strona główna</button>
+        <button onclick="location.href='#lista'">Najlepsze odcinki</button>
+        <button onclick="window.open('https://watchseries.pe/tv/watch-how-i-met-your-mother-full-online-39439', '_blank')">Strona z odcinkami</button>
+        <button onclick="location.href='edit.html'">Zamien ostatni odzincek</button>
+    </nav>
+
+    <main id="top">
+        <selection>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/How_i_met_your_mother_logo.svg" 
+            alt="Logo HIMYM" 
+            style="max-width: 300px; height: auto; margin: 20px 0; filter: brightness(0) invert(1);">
+            <h1>Obecny odcinek: 
+                <a id="current-episode" href="#" target="_blank">Ladowanie...</a></h1>
+        </selection>
+
+        <section id="lista">
+            <h2>Lista polecanych odcinków</h2>
+        
+            <div>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Numer odcinka</th>
+                    <th>Sezon</th>
+                    <th>Opis</th>
+                    <th>Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>9</td>
+                    <td>2</td>
+                    <td>Slap Bet – <strong>legendarny</strong> zakład o uderzenia</td>
+                    <td><a href="https://example.com/slapbet" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>Girls vs. Suits – <em>Barney śpiewa!</em></td>
+                    <td><a href="https://example.com/girlsvssuits" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>9</td>
+                    <td>The End of the Aisle – <del>ostatni</del> <span>przedostatni</span> ślubny odcinek</td>
+                    <td><a href="https://example.com/theend" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>Girls vs. Suits – <em>Barney śpiewa!</em></td>
+                    <td><a href="https://example.com/girlsvssuits" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>Belly Full of Turkey – pierwszy ślad Lily i Marshalla o dzieciach</td>
+                    <td><a href="https://example.com/bellyturkey" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>2</td>
+                    <td>Something Blue – ślub Lily i Marshalla</td>
+                    <td><a href="https://example.com/somethingblue" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>4</td>
+                    <td>The Front Porch – <del>Robin i Ted</del> – brutalna szczerość Lily</td>
+                    <td><a href="https://example.com/frontporch" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>The Playbook – słynne <span>"Zamknięcie Fabryki Pizzy"</span> Barneya</td>
+                    <td><a href="https://example.com/playbook" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>False Positive – wszyscy panikują nad przyszłością</td>
+                    <td><a href="https://example.com/falsepositive" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Pilot – Ted zaczyna opowiadać historię</td>
+                    <td><a href="https://example.com/pilot" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>4</td>
+                    <td>Murtaugh – lista rzeczy "za stary jestem na to"</td>
+                    <td><a href="https://example.com/murtaugh" target="_blank">Zobacz</a></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>9</td>
+                    <td>The End of the Aisle – <strong>finałowy ślub</strong> Barneya i Robin</td>
+                    <td><a href="https://example.com/endofaisle" target="_blank">Zobacz</a></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+        
+        <footer>
+            <p><small>Ta strona jest fanowskim projektem edukacyjnym.</small></p>
+        </footer>
+        <script>
+            const link = localStorage.getItem("episodeLink") || "https://watchseries.pe/watch-tv/watch-how-i-met-your-mother-full-online-39439.4877395";
+            const name = localStorage.getItem("episodeName") || "obecny_odcinek";
+
+            const a = document.getElementById("current-episode");
+            a.href = link;
+            a.textContent = name;
+        </script>
+    </main> 
+</body>
+</html>
