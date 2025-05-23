@@ -8,9 +8,11 @@
     <Grid>
         <!-- Definicja wierszy -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+            <!-- Pasek menu -->
+            <RowDefinition Height="*"/>
             <!-- Obszar wiadomości -->
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
             <!-- Pasek wpisywania wiadomości -->
         </Grid.RowDefinitions>
 
@@ -28,10 +30,12 @@
         </Menu>
 
         <!-- Obszar wiadomości -->
-        <ListBox Name="MessagesListBox" Grid.Row="0" Margin="10"/>
+        <ScrollViewer Grid.Row="1" Name="MessagesScrollViewer" VerticalScrollBarVisibility="Auto" Margin="10">
+            <StackPanel Name="MessagesPanel"/>
+        </ScrollViewer>
 
         <!-- Obszar wpisywania wiadomości -->
-        <DockPanel Grid.Row="1" Margin="10">
+        <DockPanel Grid.Row="2" Margin="10">
             <TextBox Name="MessageTextBox" 
                      AcceptsReturn="True"
                      VerticalAlignment="Center"
