@@ -46,17 +46,16 @@
             <TextBox Name="MessageTextBox" 
                      AcceptsReturn="True"
                      VerticalAlignment="Center"
-                     VerticalScrollBarVisibility="Auto"
+                     VerticalScrollBarVisibility="Disabled"
                      TextWrapping="Wrap"
                      MinHeight="30"
                      MaxHeight="100"
                      Grid.Column="0"
                      PreviewKeyDown="MessageTextBox_PreviewKeyDown"
+                     TextChanged="MessageTextBox_TextChanged"
                      Margin="0,0,10,0"/>
-            <!-- Odstęp między TextBox a przyciskiem -->
 
             <Button Content="Send" Width="80" Grid.Column="1" Click="SendButton_Click" Margin="10,0,0,0"/>
-            <!-- Przesunięcie przycisku w prawo -->
         </Grid>
     </Grid>
 </Window>

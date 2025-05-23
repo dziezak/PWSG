@@ -119,6 +119,11 @@ namespace ChatApp
             AddSystemMessage("Connected");
         }
 
+        private void MessageTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            MessageTextBox.Height = Math.Min(MessageTextBox.ActualHeight, 100);
+        }
+
         private void DisconnectMenuItem_Click(object sender, RoutedEventArgs e)
         {
             isConnected = false;
